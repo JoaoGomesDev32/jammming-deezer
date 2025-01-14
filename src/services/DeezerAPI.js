@@ -14,4 +14,6 @@ const searchTracks = async (query) => {
     }
 };
 
-export default { searchTracks };
+const DeezerAPI = { searchTracks };
+
+export default DeezerAPI;

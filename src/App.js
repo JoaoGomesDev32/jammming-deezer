@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import SearchBar from './components/SearchBar/SearchBar';
+import SearchResults from './components/SearchResults/SearchResults';
+import Playlist from './components/PlayList/Playlist';
+import DeezerAPI from './services/DeezerAPI';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+   const [searchResults, setSearchResults] = useState([]);
+   const [playlist, setPlaylist] = useState([]);
+
+   const search = async (query) => {
+       const results = await DeezerAPI.searchTracks(query);
+       setSearchResults(results);
+   };
+
+   const addTrack = (track) => {
+       if (!playlist.find((t) => t.id === track.id)) {
+           setPlaylist([...playlist, track]);
+       }
+   };
+
+   const removeTrack = (track) => {
+       setPlaylist(playlist.filter((t) => t.id !== track.id));
+   };
+
+   return (
+       <div className="App">
+           <SearchBar onSearch={search} />
+           <SearchResults tracks={searchResults} onAdd={addTrack} />
+           <Playlist playlist={playlist} onRemove={removeTrack} />
+       </div>
+   );
+};
 
 export default App;
