@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://api.deezer.com';
+const API_BASE_URL = '/api'; // Agora passa pelo proxy configurado.
 
 const searchTracks = async (query) => {
     try {
