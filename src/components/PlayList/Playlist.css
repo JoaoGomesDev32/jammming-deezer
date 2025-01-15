@@ -1,0 +1,24 @@
+/* src/components/Playlist/Playlist.css */
+.Playlist {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.Playlist h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.Playlist .Track {
+    margin-bottom: 10px;
+}
+
+.Playlist .Track button {
+    background-color: #dc3545;
+}
+
+.Playlist .Track button:hover {
+    background-color: #c82333;
+}

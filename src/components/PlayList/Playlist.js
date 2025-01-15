@@ -1,5 +1,6 @@
 import React from 'react';
 import Track from '../Track/Track';
+import './Playlist.css';
 
 const Playlist = ({ playlist, onRemove }) => {
    return (

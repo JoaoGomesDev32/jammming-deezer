@@ -1,4 +1,5 @@
 import React from 'react';
+import './Track.css';
 
 const Track = ({ track, onAction, actionText }) => {
    const handleAction = () => onAction(track);
