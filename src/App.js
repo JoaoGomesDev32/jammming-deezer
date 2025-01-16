@@ -9,7 +9,8 @@ import Footer from "./components/Footer";
 
 const App = () => {
    const [searchResults, setSearchResults] = useState([]);
-   const [playlist, setPlaylist] = useState([]);
+const [playlist, setPlaylist] = useState([]);
+const [playlistName] = useState('My Playlist');
 
    const search = async (query) => {
        const results = await DeezerAPI.searchTracks(query);
@@ -26,12 +27,17 @@ const App = () => {
        setPlaylist(playlist.filter((t) => t.id !== track.id));
    };
 
+   const savePlaylist = () => {
+    alert(`Playlist "${playlistName}" salva com ${playlist.length} músicas!`);
+    setPlaylist([]); // Reseta a playlist após salvar
+  };
+
    return (
        <div className="App">
             <Header />
            <SearchBar onSearch={search} />
            <SearchResults tracks={searchResults} onAdd={addTrack} />
-           <Playlist playlist={playlist} onRemove={removeTrack} />
+           <Playlist playlistName={playlistName} playlist={playlist} onRemove={removeTrack} onSave={savePlaylist} />
            <Footer />
        </div>
    );
