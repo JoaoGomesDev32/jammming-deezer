@@ -1,9 +1,10 @@
 import React from 'react';
 import Track from '../Track/Track';
+import './SearchResults.css';
 
 const SearchResults = ({ tracks, onAdd }) => {
    return (
-       <div className="SearchResults">
+       <div className="search-results">
            <h2>Resultados da Pesquisa</h2>
            {tracks.map((track) => (
                <Track

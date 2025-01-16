@@ -9,7 +9,7 @@ const SearchBar = ({ onSearch }) => {
    };
 
    return (
-       <div className="SearchBar">
+       <div className="search-bar">
            <input
                type="text"
                placeholder="Pesquise músicas"

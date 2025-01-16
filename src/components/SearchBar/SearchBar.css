@@ -1,39 +1,29 @@
-/* Barra de pesquisa */
-.SearchBar {
+.search-bar {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 20px;
-    background-color: #181818;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
     padding: 10px;
+    border: none;
     border-radius: 5px;
-}
-
-.SearchBar input {
-    padding: 12px;
-    margin-right: 10px;
     width: 300px;
+    font-size: 16px;
+  }
+  
+  .search-bar button {
+    background-color: #ff5252;
+    color: #fff;
     border: none;
-    border-radius: 4px;
-    background-color: #121212;
-    color: #FFFFFF;
-}
-
-.SearchBar input::placeholder {
-    color: #B3B3B3;
-}
-
-.SearchBar button {
-    padding: 12px 15px;
-    background-color: #EF5466;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 4px;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.SearchBar button:hover {
-    background-color: #C13A4C;
-}
+    font-size: 16px;
+  }
+  
+  .search-bar button:hover {
+    background-color: #ff7979;
+  }
+  

@@ -3,6 +3,7 @@ import SearchBar from './components/SearchBar/SearchBar';
 import SearchResults from './components/SearchResults/SearchResults';
 import Playlist from './components/PlayList/Playlist';
 import DeezerAPI from './services/DeezerAPI';
+import './App.css';
 
 const App = () => {
    const [searchResults, setSearchResults] = useState([]);

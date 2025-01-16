@@ -34,3 +34,14 @@
 .Track button:hover {
     background-color: #C13A4C;
 }
+
+.Track:hover {
+    background-color: #282828;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
