@@ -1,31 +1,36 @@
-/* src/components/Track/Track.css */
+/* Card de música */
 .Track {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    background-color: #181818;
+    border-bottom: 1px solid #282828;
+    color: #FFFFFF;
 }
 
 .Track h3 {
     font-size: 16px;
     margin: 0;
+    color: #FFFFFF;
 }
 
 .Track p {
     font-size: 14px;
-    color: #666;
+    color: #B3B3B3;
+    margin: 0;
 }
 
 .Track button {
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: white;
+    padding: 8px 12px;
+    background-color: #EF5466;
     border: none;
     border-radius: 4px;
+    color: #FFFFFF;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .Track button:hover {
-    background-color: #0056b3;
+    background-color: #C13A4C;
 }
