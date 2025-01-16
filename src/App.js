@@ -4,6 +4,8 @@ import SearchResults from './components/SearchResults/SearchResults';
 import Playlist from './components/PlayList/Playlist';
 import DeezerAPI from './services/DeezerAPI';
 import './App.css';
+import Header from './components/Header';
+import Footer from "./components/Footer";
 
 const App = () => {
    const [searchResults, setSearchResults] = useState([]);
@@ -26,9 +28,11 @@ const App = () => {
 
    return (
        <div className="App">
+            <Header />
            <SearchBar onSearch={search} />
            <SearchResults tracks={searchResults} onAdd={addTrack} />
            <Playlist playlist={playlist} onRemove={removeTrack} />
+           <Footer />
        </div>
    );
 };
