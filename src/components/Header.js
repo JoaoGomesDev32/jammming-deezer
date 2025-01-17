@@ -1,19 +1,16 @@
-import React from "react";
-import "./Header.css";
-
-function Header() {
+const Header = () => {
   return (
-    <header className="header">
-      <div className="logo">Jammming App</div>
-      <nav className="navbar">
-        <ul>
-          <li><a href="#home">Início</a></li>
-          <li><a href="#search">Buscar</a></li>
-          <li><a href="#about">Sobre</a></li>
-        </ul>
-      </nav>
-    </header>
+      <header className="header">
+          <h1>Deezer Clone</h1>
+          <nav>
+              <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/about">About</a></li>
+                  <li><a href="/contact">Contact</a></li>
+              </ul>
+          </nav>
+      </header>
   );
-}
+};
 
 export default Header;
